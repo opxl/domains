@@ -1,0 +1,10 @@
+{
+    "scripts": {
+        "delegate": "node delegateSubdomains.js"
+    },
+    "devDependencies": {},
+    "dependencies": {
+        "chalk": "^4.1.0",
+        "cloudflare": "^2.7.0"
+    }
+}
