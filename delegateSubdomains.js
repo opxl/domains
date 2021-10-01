@@ -23,7 +23,9 @@ function logger(prefix, color) {
 
         debug('reading record jsons for', zone);
         const recordJsons = await fs.readdir(`subdomains/${zone}`);
-        const recordNames = recordJsons.map(r => r.substring(0, r.length - 5) + '.should-get-to.work');
+        const recordNames = recordJsons
+            .filter(r => r !== '.gitkeep')
+            .map(r => r.substring(0, r.length - 5) + '.should-get-to.work');
 
         debug('comparing records to those on cloudflare');
         const discrepencies = [];
@@ -51,10 +53,16 @@ function logger(prefix, color) {
             } else if (discrepency.remote) {
                 debug('issuing', discrepency.name);
                 let correctedName = discrepency.name.substring(0, discrepency.name.length - zone.length - 1);
+                debug(correctedName);
                 const record = JSON.parse(await fs.readFile(`subdomains/${zone}/${correctedName}.json`));
 
                 if (correctedName === '@') correctedName = 'should-get-to.work';
-                await cf.dnsRecords.add(zoneId, { type: record.type, name: correctedName, content: record.value, proxied: record.proxied });
+                await cf.dnsRecords.add(zoneId, {
+                    type: record.type,
+                    name: correctedName,
+                    content: record.value,
+                    proxied: record.proxied
+                });
                 delegationLog(discrepency.name, 'has been issued');
             }
         }

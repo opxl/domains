@@ -2,12 +2,12 @@
 # yarn lockfile v1
 
 
-agent-base@^4.3.0:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/agent-base/-/agent-base-4.3.0.tgz#8165f01c436009bccad0b1d122f05ed770efc6ee"
-  integrity sha512-salcGninV0nPrwpGNn4VTXBb1SOuXQBiqbrNXoeizJsHrsL6ERFM2Ne3JUSBWRE6aeNJI2ROP/WEEIDUiDe3cg==
+agent-base@6:
+  version "6.0.2"
+  resolved "https://registry.yarnpkg.com/agent-base/-/agent-base-6.0.2.tgz#49fff58577cfee3f37176feab4c22e00f86d7f77"
+  integrity sha512-RZNwNclF7+MS/8bDg70amg32dyeZGZxiDuQmZxKLAlQjr3jGyLx+4Kkk58UO7D2QdgFIQCovuSuZESne6RG6XQ==
   dependencies:
-    es6-promisify "^5.0.0"
+    debug "4"
 
 ansi-styles@^4.1.0:
   version "4.3.0"
@@ -34,15 +34,15 @@ chalk@^4.1.0:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
 
-cloudflare@^2.7.0:
-  version "2.7.0"
-  resolved "https://registry.yarnpkg.com/cloudflare/-/cloudflare-2.7.0.tgz#ff9249a63ff9b662bd863da21e965c8f82f76012"
-  integrity sha512-yhroBpn2VBczFwiRLpyUc431XiWE+xNs8YvtjAsj1vEA1pVwhpje6BzgLW5iZbulmCuPX48lvX8HizeMWk713g==
+cloudflare@^2.9.1:
+  version "2.9.1"
+  resolved "https://registry.yarnpkg.com/cloudflare/-/cloudflare-2.9.1.tgz#9911b2a9ee3bfc2fc4f239c1f991892667e26309"
+  integrity sha512-x8yXPPoloy7xQ9GCKnsvQ3U1nwvcLndA2B3nxwSjIWxgLTUJOyakeEDsrqxZO8Dr6FkGdaXwy554fQVMpOabiw==
   dependencies:
     autocreate "^1.1.0"
     es-class "^2.1.1"
     got "^6.3.0"
-    https-proxy-agent "^2.1.1"
+    https-proxy-agent "^5.0.0"
     object-assign "^4.1.0"
     should-proxy "^1.0.4"
     url-pattern "^1.0.3"
@@ -66,12 +66,12 @@ create-error-class@^3.0.0:
   dependencies:
     capture-stack-trace "^1.0.0"
 
-debug@^3.1.0:
-  version "3.2.6"
-  resolved "https://registry.yarnpkg.com/debug/-/debug-3.2.6.tgz#e83d17de16d8a7efb7717edbe5fb10135eee629b"
-  integrity sha512-mel+jf7nrtEl5Pn1Qx46zARXKDpBbvzezse7p7LqINmdoIk8PYP5SySaxEmYv6TZ0JyEKA1hsCId6DIhgITtWQ==
+debug@4:
+  version "4.3.2"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.2.tgz#f0a49c18ac8779e31d4a0c6029dfb76873c7428b"
+  integrity sha512-mOp8wKcvj7XxC78zLgw/ZA+6TSgkoE2C/ienthhRD298T7UNwAg9diBpLRxC0mOezLl4B0xV7M0cCO6P/O0Xhw==
   dependencies:
-    ms "^2.1.1"
+    ms "2.1.2"
 
 duplexer3@^0.1.4:
   version "0.1.4"
@@ -82,18 +82,6 @@ es-class@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/es-class/-/es-class-2.1.1.tgz#6ec2243b5a1e3581c0b7eecee0130c9c0d6fb2b7"
   integrity sha1-bsIkO1oeNYHAt+7O4BMMnA1vsrc=
-
-es6-promise@^4.0.3:
-  version "4.2.8"
-  resolved "https://registry.yarnpkg.com/es6-promise/-/es6-promise-4.2.8.tgz#4eb21594c972bc40553d276e510539143db53e0a"
-  integrity sha512-HJDGx5daxeIvxdBxvG2cb9g4tEvwIk3i8+nhX0yGrYmZUzbkdg8QbDevheDB8gd0//uPj4c1EQua8Q+MViT0/w==
-
-es6-promisify@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/es6-promisify/-/es6-promisify-5.0.0.tgz#5109d62f3e56ea967c4b63505aef08291c8a5203"
-  integrity sha1-UQnWLz5W6pZ8S2NQWu8IKRyKUgM=
-  dependencies:
-    es6-promise "^4.0.3"
 
 get-stream@^3.0.0:
   version "3.0.0"
@@ -122,13 +110,13 @@ has-flag@^4.0.0:
   resolved "https://registry.yarnpkg.com/has-flag/-/has-flag-4.0.0.tgz#944771fd9c81c81265c4d6941860da06bb59479b"
   integrity sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ==
 
-https-proxy-agent@^2.1.1:
-  version "2.2.4"
-  resolved "https://registry.yarnpkg.com/https-proxy-agent/-/https-proxy-agent-2.2.4.tgz#4ee7a737abd92678a293d9b34a1af4d0d08c787b"
-  integrity sha512-OmvfoQ53WLjtA9HeYP9RNrWMJzzAz1JGaSFr1nijg0PVR1JaD/xbJq1mdEIIlxGpXp9eSe/O2LgU9DJmTPd0Eg==
+https-proxy-agent@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/https-proxy-agent/-/https-proxy-agent-5.0.0.tgz#e2a90542abb68a762e0a0850f6c9edadfd8506b2"
+  integrity sha512-EkYm5BcKUGiduxzSt3Eppko+PiNWNEpa4ySk9vTC6wDsQJW9rHSa+UhGNJoRYp7bz6Ht1eaRIa6QaJqO5rCFbA==
   dependencies:
-    agent-base "^4.3.0"
-    debug "^3.1.0"
+    agent-base "6"
+    debug "4"
 
 is-redirect@^1.0.0:
   version "1.0.0"
@@ -150,7 +138,7 @@ lowercase-keys@^1.0.0:
   resolved "https://registry.yarnpkg.com/lowercase-keys/-/lowercase-keys-1.0.1.tgz#6f9e30b47084d971a7c820ff15a6c5167b74c26f"
   integrity sha512-G2Lj61tXDnVFFOi8VZds+SoQjtQC3dgokKdDG2mTm1tx4m50NUHBOZSBwQQHyy0V12A0JTG4icfZQH+xPyh8VA==
 
-ms@^2.1.1:
+ms@2.1.2:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
   integrity sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
