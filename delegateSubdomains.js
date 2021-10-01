@@ -53,7 +53,6 @@ function logger(prefix, color) {
             } else if (discrepency.remote) {
                 debug('issuing', discrepency.name);
                 let correctedName = discrepency.name.substring(0, discrepency.name.length - zone.length - 1);
-                debug(correctedName);
                 const record = JSON.parse(await fs.readFile(`subdomains/${zone}/${correctedName}.json`));
 
                 if (correctedName === '@') correctedName = 'should-get-to.work';
