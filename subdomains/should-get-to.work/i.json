@@ -1,5 +1,5 @@
 {
-    "type": "A",
-    "value": "1.1.1.1",
+    "type": "CNAME",
+    "value": "jobs.movity.it",
     "proxied": true
 }
