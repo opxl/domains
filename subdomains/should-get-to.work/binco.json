@@ -1,5 +1,5 @@
 {
-    "type": "CNAME", // record type (A, AAAA, CNAME, etc.)
-    "value": "binco.me", // the value of the record (IP if A, domain if CNAME, etc.)
-    "proxied": true // if the record should be proxied by Cloudflare
+    "type": "CNAME",
+    "value": "binco.me",
+    "proxied": true
 }
