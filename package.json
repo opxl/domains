@@ -1,6 +1,6 @@
 {
     "scripts": {
-        "delegate": "node delegateSubdomains.js"
+        "delegate": "node delegateSubdomains.js --color"
     },
     "devDependencies": {},
     "dependencies": {
